@@ -1,5 +1,7 @@
 package Microservice.accounts.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -26,11 +28,20 @@ import lombok.AllArgsConstructor;
 @Tag(name = "CURD REST APIs for Accounts in EazyBank")
 @RestController
 @RequestMapping("/api")
-@AllArgsConstructor
+/* @AllArgsConstructor */
 @Validated
 public class AccountsController {
 	
 	private IAccountsService iAccountsService;
+	
+	@Autowired
+	public AccountsController(IAccountsService iAccountsService) {
+		this.iAccountsService = iAccountsService;
+	}
+	
+	
+	@Value("${build.version}")
+	private String buildVersion;
 	
 	
 	@Operation(summary = "Create Account for REST Api")
@@ -73,6 +84,11 @@ public class AccountsController {
 		}else {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ResponseDto(AccountsCostants.STATUS_500, AccountsCostants.MESSAGE_500));
 		}
+	}
+	
+	@GetMapping("/build-info")
+	public ResponseEntity<String>getBuildInfo(){
+		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
 	}
 	
 }
