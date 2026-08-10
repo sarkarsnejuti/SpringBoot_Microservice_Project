@@ -2,6 +2,7 @@ package Microservice.accounts.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import Microservice.accounts.constants.AccountsCostants;
+import Microservice.accounts.dto.AccountsContactInfoDto;
 import Microservice.accounts.dto.CustomerDto;
 import Microservice.accounts.dto.ResponseDto;
 import Microservice.accounts.service.IAccountsService;
@@ -42,6 +44,12 @@ public class AccountsController {
 	
 	@Value("${build.version}")
 	private String buildVersion;
+	
+	@Autowired
+	private Environment environment;
+	
+	@Autowired
+	private AccountsContactInfoDto accountsContactInfoDto;
 	
 	
 	@Operation(summary = "Create Account for REST Api")
@@ -89,6 +97,16 @@ public class AccountsController {
 	@GetMapping("/build-info")
 	public ResponseEntity<String>getBuildInfo(){
 		return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+	}
+	
+	@GetMapping("/maven-version")
+	public ResponseEntity<String>getJavaVersion(){
+		return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("MAVEN_HOME"));
+	}
+	
+	@GetMapping("/contact-info")
+	public ResponseEntity<AccountsContactInfoDto>getcontactInfo(){
+		return ResponseEntity.status(HttpStatus.OK).body(accountsContactInfoDto);
 	}
 	
 }

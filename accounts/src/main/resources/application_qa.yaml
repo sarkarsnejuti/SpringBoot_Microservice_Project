@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local REST Api for QA"
+
+  contactDetails:
+    name: "Jash Kaneyl"
+    email: "jash2026@gmail.com"
+    onCallSupport:
+      - "(555)9029 8966"
+      - "(555)1252 9276"

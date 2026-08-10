@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local REST Api for PROD"
+
+  contactDetails:
+    name: "Kiyanku Sonam"
+    email: "sonal12yan@gmail.com"
+    onCallSupport:
+      - "(222)9029 8966"
+      - "(222)1252 9276"
