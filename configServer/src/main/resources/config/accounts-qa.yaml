@@ -7,7 +7,7 @@ accounts:
 
   contactDetails:
     name: "Jash Kaneyl"
-    email: "7f21a8231574339d263f9388d529164cbc8d215d89295c7e4651a19c41df9d8f081d1e415c09b16630ded156dd970e40"
+    email: "{cipher}7f21a8231574339d263f9388d529164cbc8d215d89295c7e4651a19c41df9d8f081d1e415c09b16630ded156dd970e40"
     onCallSupport:
       - "(555)9029 8966"
       - "(555)1252 9276"
