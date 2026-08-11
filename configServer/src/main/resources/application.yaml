@@ -10,7 +10,9 @@ spring:
       server:
         git:
           uri: "https://github.com/sarkarsnejuti/SpringBoot_Microservice_Project.git"
-          default-label: main
+          default-label: master
+          search-paths:
+            - configServer/src/main/resources/config
           timeout: 90
           clone-on-start: true
           force-pull: true
