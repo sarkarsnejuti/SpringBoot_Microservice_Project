@@ -3,13 +3,17 @@ spring:
     name: configServer
 
   profiles:
-    active: native
+    active: git
 
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+        git:
+          uri: "https://github.com/sarkarsnejuti/SpringBoot_Microservice_Project.git"
+          default-label: main
+          timeout: 90
+          clone-on-start: true
+          force-pull: true
 
 server:
   port: 8080
