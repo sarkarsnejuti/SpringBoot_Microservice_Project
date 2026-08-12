@@ -3,7 +3,7 @@ build:
   version: "2.0"
 
 accounts:
-  message: "Welcome to EazyBank accounts related local REST Api for QA"
+  message: "Welcome to EazyBank accounts related local REST Api for Quality Testing"
 
   contactDetails:
     name: "Jash Kaneyl"
