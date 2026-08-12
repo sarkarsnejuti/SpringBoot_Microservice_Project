@@ -3,7 +3,7 @@ build:
   version: "3.0"
 
 accounts:
-  message: "Welcome to EazyBank accounts related local REST Api for Production"
+  message: "Welcome to EazyBank accounts related local REST Api for Prod"
 
   contactDetails:
     name: "Kiyanku Sonam"
