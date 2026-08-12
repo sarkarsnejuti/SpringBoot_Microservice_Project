@@ -17,8 +17,8 @@ spring:
           clone-on-start: true
           force-pull: true
 
-  encrypt:
-    key: "45Da908NSH87CBVS221HBSN908GASRTQUG"
+encrypt:
+  key: "45Da908NSH87CBVS221HBSN908GASRTQUG"
 
 server:
   port: 8080

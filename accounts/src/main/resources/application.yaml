@@ -26,3 +26,9 @@ spring:
 
 server:
   port: 5050
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
