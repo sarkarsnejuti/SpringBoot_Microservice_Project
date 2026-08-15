@@ -3,11 +3,11 @@ build:
   version: "3.0"
 
 accounts:
-  message: "Welcome to EazyBank accounts related local REST Api for PROD"
+  message: "Welcome to EazyBank accounts related local REST Api for Prod"
 
   contactDetails:
     name: "Kiyanku Sonam"
-    email: "sonal12yan@gmail.com"
+    email: "{cipher}202606a57a39dba14f4552503e573cf9f9ca5cb9ef3c372a52a9beabe2cabc0a17f20179f141c7bcc0707b1719abbc43"
     onCallSupport:
       - "(222)9029 8966"
       - "(222)1252 9276"
