@@ -1,0 +1,12 @@
+build:
+  version: "1.0"
+
+cards:
+  message: "Welcome to EazyBank cards related local REST Api"
+
+  contactDetails:
+    name: "Yaline Yamal"
+    email: "yamal2000@gmail.com"
+    onCallSupport:
+      - "(666)9029 8966"
+      - "(666)1252 9276"
