@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import Microservice.accounts.dto.CardsDto;
 
-@FeignClient("cards")
+@FeignClient(name = "cards")
 public interface CardsFeignClient {
 	
 	@GetMapping(value = "/api/fetch",consumes="application/json")
