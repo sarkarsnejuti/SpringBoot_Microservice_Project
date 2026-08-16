@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: GatewayServer
+
+  config:
+    import: "optional:configserver:http://localhost:8080"
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    gateway:
+      enabled: true
+
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: "GatewayServer"
+    description: "Eazy Bank Gateway Server Application"
+    version: "1.0.0"
