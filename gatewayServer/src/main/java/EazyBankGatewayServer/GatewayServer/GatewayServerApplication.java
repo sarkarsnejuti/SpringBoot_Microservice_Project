@@ -21,11 +21,11 @@ public RouteLocator eazyBankRouteConfig(RouteLocatorBuilder routeLocatorBuilder)
 			.route(p-> p
 					.path("/eazybank/accounts/**")
 					.filters( f -> f.rewritePath("/eazybank/accounts/(?<segment>.*)", "/${segment}"))
-					.uri("ib://ACCOUNTS"))
+					.uri("lb://ACCOUNTS"))
 			.route(p-> p
 					.path("/eazybank/accounts/**")
 					.filters( f -> f.rewritePath("/eazybank/accounts/(?<segment>.*)", "/${segment}"))
-					.uri("ib://CARDS")).build();
+					.uri("lb://CARDS")).build();
 }
 
 }
